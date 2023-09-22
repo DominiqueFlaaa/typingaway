@@ -1,13 +1,13 @@
 
 <%= form_with(model: [ @article, @article.comments.build ], local: true) do |form| %>
   <p>
-    <%= form.label 'Your name' %><br>
-    <%= form.text_field :commenter %>
+    <%= form.label 'Thought' %><br>
+    <%= form.text_area :body, class: "form-control",  placeholder: "What you're thinking...", autofocus: true %>
   </p>
 
   <p>
-    <%= form.label 'Thought' %><br>
-    <%= form.text_area :body %>
+    <%= form.label 'Signature' %><br>
+    <%= form.text_field :commenter, class: "form-control", placeholder: "Jane Doe", autofocus: true %>
   </p>
 
   <p>
