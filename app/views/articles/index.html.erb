@@ -13,7 +13,7 @@
         <tr>
           <td><div class="article-created-at"><%= link_to article.created_at.to_date, article_path(article) %></div></td>
           <td><div class="article-title"><%= link_to article.title, article_path(article) %></div></td>
-          <td><div class="article-body"><%= truncate(article.description, length:200) %></div></td>
+          <td><div class="article-body"><%= markdown(truncate(article.description, length:200)) %></div></td>
           <td><%= link_to 'Edit', edit_article_path(article), class: "button" %></td>
           <td><%= link_to 'Delete', article_path(article),
                   class: "button",
